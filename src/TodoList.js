@@ -16,8 +16,10 @@ class TodoList extends React.Component {
   }
 
   handleRemove(i) {
-    let newItems = this.state.items.slice();
-    newItems.splice(i, 1);
+    // let newItems = this.state.items.slice();
+    // newItems.splice(i, 1);
+    let newItems = this.state.items;
+    newItems.shift();
     this.setState({items: newItems});
   }
 
